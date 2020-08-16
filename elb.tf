@@ -20,6 +20,7 @@ resource "aws_elb" "my-elb" {
     interval            = 30
   }
 
+  #adding ec2 instances
   instances                   = aws_instance.web.*.id
   cross_zone_load_balancing   = true
   idle_timeout                = 400
