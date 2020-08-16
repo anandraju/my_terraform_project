@@ -46,3 +46,8 @@ variable "web_tags" {
     Name = "Webserver"
   }
 }
+
+variable "main_vpc_s3_bucket" {
+  type    = string
+  default = "main_vpc_s3_bucket"
+}
