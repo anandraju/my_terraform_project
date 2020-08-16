@@ -14,4 +14,5 @@ resource "aws_instance" "web" {
   tags                   = local.web_tags
   user_data              = file("scripts/install_apache.sh")
   vpc_security_group_ids = [aws_security_group.web_sg.id]
+  key_name               = aws_key_pair.mykeypair.key_name
 }

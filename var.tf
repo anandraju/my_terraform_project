@@ -51,3 +51,8 @@ variable "main_vpc_s3_bucket" {
   type    = string
   default = "main_vpc_s3_bucket"
 }
+
+variable "PATH_TO_PUBLIC_KEY" {
+  default = "mykey.pub"
+}
+

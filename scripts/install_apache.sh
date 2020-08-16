@@ -3,7 +3,7 @@
 sudo su
 yum update -y
 yum install -y httpd
-systemctl start httpd
-systemctl enable httpd
+service httpd start
+chkconfig httpd on
 echo "Hello world from $(hostname -f)" > /var/www/html/index.html
-systemctl restart httpd
+service httpd restart
