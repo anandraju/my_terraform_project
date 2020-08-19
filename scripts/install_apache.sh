@@ -1,9 +1,11 @@
 #Install Nginx on EC2
 #!/bin/bash
-sudo su
+sudo su 
 yum update -y
 yum install -y httpd
-service httpd start
+/etc/init.d/httpd start
 chkconfig httpd on
 echo "Hello world from $(hostname -f)" > /var/www/html/index.html
-service httpd restart
+/etc/init.d/httpd restart
+/etc/init.d/httpd restart
+
